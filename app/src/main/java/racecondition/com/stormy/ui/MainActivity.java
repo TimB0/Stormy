@@ -76,13 +76,14 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void getForecast(double latitude, double longitude) {
-        String apiKey = "Need To Add Your API Key Here";
+        String apiKey = "Need To_Add_Your_API_Key_Here";
         String forecastUrl = "https://api.forecast.io/forecast/" + apiKey +
                 "/" + latitude + "," + longitude;
 
         if (isNetworkAvailable()) {
             toggleRefresh();
 
+            Log.d(TAG, forecastUrl);
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
                     .url(forecastUrl)
@@ -99,6 +100,7 @@ public class MainActivity extends ActionBarActivity {
                                 }
                             });
                             alertUserAboutError();
+                            e.printStackTrace();
                         }
 
                         @Override
@@ -124,12 +126,11 @@ public class MainActivity extends ActionBarActivity {
                                 }
                                 else {
                                     alertUserAboutError();
+                                    Log.v(TAG, jsonData);
+
                                 }
                             }
-                            catch (IOException e) {
-                                Log.e(TAG, "Exception caught: ", e);
-                            }
-                            catch (JSONException e) {
+                            catch (IOException | JSONException e) {
                                 Log.e(TAG, "Exception caught: ", e);
                             }
                         }
