@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/tboland/Stormy/stormy/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/tboland/Stormy/stormy/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/tboland/Stormy/stormy/build/intermediates/res/merged/debug/menu/menu_daily_forecast.xml",
+        "source": "/Users/tboland/Stormy/stormy/src/main/res/menu/menu_daily_forecast.xml"
+    },
+    {
+        "merged": "/Users/tboland/Stormy/stormy/build/intermediates/res/merged/debug/menu/menu_hourly_forecast.xml",
+        "source": "/Users/tboland/Stormy/stormy/src/main/res/menu/menu_hourly_forecast.xml"
+    }
+]
